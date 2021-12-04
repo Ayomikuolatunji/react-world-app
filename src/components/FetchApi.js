@@ -4,7 +4,6 @@ export const FetchData=async()=>{
 
        try {
            const {data}=await axios.get("https://restcountries.com/v2/all");
-           console.log(data)
            return data;
        } catch (error) {
            console.log(error)
@@ -15,7 +14,7 @@ export const FetchData=async()=>{
 // searched by name
 export const FetchName=async(name)=>{
     try {
-        const {data}=await axios.get(`https://restcountries.eu/rest/v2/name/${name}`);
+        const {data}=await axios.get(`https://restcountries.com/v2/name/${name}`);
         return data;
     } catch (error) {
         console.log(error)
